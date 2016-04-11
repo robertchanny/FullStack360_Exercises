@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type='text/javascript' src='/javascripts/word.js'></script>
+    <script type='text/javascript' src='/javascripts/number.js'></script>
+    <script type='text/javascript' src='/javascripts/highlight.js'></script>
+    <script type='text/javascript' src='/javascripts/prime.js'></script>
+    <script type='text/javascript' src='/javascripts/removecolor.js'></script>
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <p>Welcome to {{ title }}</p>
+
+    <input id='wordinput'  onInput='testWord()' class='form-control' type='text' name='word' placeholder='Type a word here'/>
+    <br>
+
+    <input id='largestNumber' onInput='testNumbers()' class='form-control' type='text' name='word' placeholder='Type your numbers here'/>
+    <br>
+    <p id="result">Result</p>
+
+    <h1>Highlight</h1>
+    <div class="row">
+      <div class='col-md-6'>
+        <p>
+          <a href='#' onMouseOver='highlight(bolds)' onMouseOut="unhighlight(bolds)">On mouse over here the bold text will be highlighted</a>
+        </p>
+        <p><strong>Bold text</strong> Not bold text <strong>Some more cool bold text</strong> Some more boring regular text <br>
+        <strong>Even more bold text</strong> Just to test stuff <strong>This will change color</strong> :)
+        </p>
+      </div>
+    </div>
+    <br>
+
+    <input id='prime' onChange='isPrime()' class='form-control' type='text' name='word' placeholder='Type a number <1000 here'/>
+    <br>
+    <p id="primeResult">Result</p>
+
+    <h1>Remove Colors</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <form>
+          <select id="colorSelect">
+            <option>Red</option>
+            <option>Green</option>
+            <option>White</option>
+            <option>Black</option>
+          </select>
+          <input type="button" onClick="removeColor()" value="Select and Remove">
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>
